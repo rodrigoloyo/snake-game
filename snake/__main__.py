@@ -16,6 +16,7 @@ from game.services.video_service import VideoService
 from game.shared.color import Color
 from game.shared.point import Point
 from game.scripting.control_actors_action_1 import ControlActorsAction_1
+from game.casting.score1 import Score1
 
 
 def main():
@@ -25,6 +26,7 @@ def main():
     cast.add_actor("foods", Food())
     cast.add_actor("snakes", Snake())
     cast.add_actor("scores", Score())
+    cast.add_actor("scores1", Score1())
     cast.add_actor("snakes1", Snake1())
     # cast.add_actor("snakes1", Snake())
     
