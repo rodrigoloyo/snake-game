@@ -20,6 +20,7 @@ class Food(Actor):
         self.set_text("@")
         self.set_color(constants.RED)
         self.reset()
+        #test
         
     def reset(self):
         """Selects a random position and points that the food is worth."""
