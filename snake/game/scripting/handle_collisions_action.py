@@ -46,14 +46,18 @@ class HandleCollisionsAction(Action):
         head = snake.get_head()
         head_1 = snake_1.get_head()
 
-        if head.get_position().equals(food.get_position()) or head.get_position().equals(food_1.get_position()):
+        # if head.get_position().equals(food.get_position()) or head.get_position().equals(food_1.get_position()):
+
+        if head.get_position().equals(food.get_position()):
             points = food.get_points()
-            points = food_1.get_points()
+            # points = food_1.get_points()
             snake.grow_tail(points)
             score.add_points(points)
             food.reset()
-        if head_1.get_position().equals(food_1.get_position()) or head_1.get_position().equals(food.get_position()) :
-            points1 = food_1.get_points()
+        # if head_1.get_position().equals(food_1.get_position()) or head_1.get_position().equals(food.get_position()) :
+
+        if head_1.get_position().equals(food_1.get_position()):    
+            # points1 = food_1.get_points()
             points1 = food.get_points()
             snake_1.grow_tail(points1)
             score1.add_points(points1)
@@ -68,6 +72,9 @@ class HandleCollisionsAction(Action):
         head = snake.get_segments()[0]
         segments = snake.get_segments()[1:]
         snake1 = cast.get_first_actor("snakes1")
+        food = cast.get_first_actor("foods")
+        food_1 = cast.get_first_actor("foods1")
+
         head1 = snake1.get_segments()[0]
         segments1 = snake1.get_segments()[1:]
         for segment1 in segments1:
@@ -83,6 +90,10 @@ class HandleCollisionsAction(Action):
                     self._is_game_over = True
                 elif  head1.get_position().equals(segment.get_position()):    
                       self._is_game_over = True
+                elif  head1.get_position().equals(food.get_position()):    
+                      self._is_game_over = True
+                elif  head.get_position().equals(food_1.get_position()):    
+                      self._is_game_over = True      
 
 
                      

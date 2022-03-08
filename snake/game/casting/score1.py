@@ -19,12 +19,12 @@ class Score1(Score):
         self.add_points(0)
         self._position = Point(760, 0)
 
-    def add_points(self, points):
-        """Adds the given points to the score's total points.
+    # def add_points(self, points):
+    #     """Adds the given points to the score's total points.
         
-        Args:
-            points (int): The points to add.
-        """
-        self._points += points
-        self.set_text(f"Player 2 Score: {self._points}")
-        #test
+    #     Args:
+    #         points (int): The points to add.
+    #     """
+    #     self._points += points
+    #     self.set_text(f"Player 2 Score: {self._points}")
+    
