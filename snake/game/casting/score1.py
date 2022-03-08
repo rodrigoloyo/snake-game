@@ -27,3 +27,4 @@ class Score1(Score):
         """
         self._points += points
         self.set_text(f"Player 2 Score: {self._points}")
+        #test
